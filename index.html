@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Maze Generator & Solver</title>
+  <meta name="description" content="Maze Generator & Solver">
+  <meta name="author" content="Mike Golubitsky">
+
+  <link rel="icon"
+      type="image/png"
+      href="/assets/maze_favicon.ico">
+  <!-- load jQuery slider stylesheet -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Fredoka+One' type='text/css'>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="content">
+    <div id="controls">
+      <h1>Maze Generator & Solver</h1>
+      <div id="click-message">Click any two locations in the maze to find the shortest path between them!</div>
+      <span id="generate-random" class="button">Generate a random maze </span>
+      <span id="generate" class="button">Generate a maze using dimensions set via sliders</span>
+      <div class="slider-container">
+        <div id="x-slider"></div><div class="dimension-label">X size:</div><div id="x-dimension-value" class="label"></div>
+      </div>
+      <div class="slider-container">
+        <div id="y-slider"></div><div class="dimension-label">Y size:</div><div id="y-dimension-value" class="label"></div>
+      </div>
+
+      <a class="linked-in" href="https://www.linkedin.com/in/abhishek-bishnoi-b848441b9/">WHO MADE THIS?</a>
+    </div>
+
+    <div id="maze">
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="js/cell.js"></script>
+  <script src="js/maze.js"></script>
+  <script src="js/mazeView.js"></script>
+  <script src="js/mazeEventHandling.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/queue.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/responsive.js"></script>
+  <script type="text/javascript">
+    ;(function() {
+      mazeSolver.css.initialize();
+    }());
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63340171-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

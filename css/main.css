@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: normal;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*main*/
+
+body {
+  color: #c2f01c;
+  font-family: 'Roboto', sans-serif;
+  background: #40403f;
+  text-align: center;
+}
+
+#content {
+  margin: 20px;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+}
+
+/*controls*/
+h1 {
+  width: 200px;
+  font-size: 30px;
+}
+#controls {
+  width: 200px;
+  margin: 0 20px;
+}
+
+#controls * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dimension-label {
+  margin-right: 7px;
+}
+
+.linked-in {
+  width: 200px;
+  text-decoration: none;
+  position: absolute;
+  font-size: 20px;
+  padding: 8px 2px;
+  bottom: 30px;
+  left: 39px;
+  right: 0;
+}
+
+.button {
+  margin: 10px;
+  font-size: 20px;
+  padding: 7px;
+  display: inline-block;
+}
+
+.linked-in, .button {
+  color: #eee;
+  background: black;
+  border-radius: 5px;
+  transition: color 0.75s ease;
+  transition: transform 0.25s ease;
+  transition: background 0.1s ease;
+}
+
+.linked-in:hover, .button:hover {
+  cursor: pointer;
+  background: #2c7e7a;
+  color: #40d942;
+  -ms-transform: scale(1.025,1.025); /* IE 9 */
+  -webkit-transform: scale(1.025,1.025); /* Safari */
+  transform: scale(1.025,1.025);
+}
+
+.label {
+  width: 7%;
+}
+
+#click-message {
+  height: 80px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  display: block;
+  text-align: center;
+  color: yellow;
+}
+/*maze*/
+
+#maze {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border: 5px solid #A30000;
+  background: black;
+}
+
+div.maze-row {
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+}
+
+div.maze-cell {
+  background: black;
+  flex: initial;
+  flex-shrink: 2;
+  border: 1px solid #A30000;
+  transition: background 0.5s ease;
+}
+
+div.current {
+  background: #fff;
+}
+
+div.seen {
+  background: #777;
+}
+
+div.explored {
+  background: #aaa;
+}
+
+div.start {
+  background: #444400;
+}
+
+div.end {
+  background: #ffff00;
+}
+
+div.left-open {
+  border-left-style: none;
+}
+
+div.right-open {
+  border-right-style: none;
+}
+
+div.up-open {
+  border-top-style: none;
+}
+
+div.down-open {
+  border-bottom-style: none;
+}
+
+/*slider*/
+
+.slider-container {
+  width: 100%;
+  display: block;
+}
+
+.ui-slider {
+  width: 70%;
+  margin: 10px;
+}
+
+.ui-slider .ui-slider-handle {
+  background: #A30000;
+  width: 12px;
+  /*used to center slider on click*/
+  margin-left: -6px;
+}
+
+.ui-slider-handle:hover {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.ui-slider-handle:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.ui-slider-range-min, .ui-widget-content {
+  background: black;
+}
+
